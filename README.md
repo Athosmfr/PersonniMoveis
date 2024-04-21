@@ -18,7 +18,7 @@ provided by the store can also be customized by clients, improving user experien
 of the project is an analysis of current e-commerce platforms with the goal of optimizing furniture sales procedures.
 </p>
 
-## Tecnologies & Libraries
+## Technologies & Libraries
 
 ### Front-end
 - Figma

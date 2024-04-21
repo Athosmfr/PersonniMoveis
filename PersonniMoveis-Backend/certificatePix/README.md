@@ -1,0 +1,2 @@
+pt-br > Local onde o certificado PIX deve ser inserido para uso com a API da Gerencianet (o certificado foi removido por se tratar de um repositório público).
+en > Place where the PIX certificate should be inserted for use with the Gerencianet API (the certificate was removed due to being a public repository).

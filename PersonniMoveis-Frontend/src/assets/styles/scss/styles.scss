@@ -1,0 +1,392 @@
+@import './basics.scss';
+
+body{
+
+    h1.page-title{
+        font-size: 3.5rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+
+
+    .el-menu--horizontal {
+        border-bottom: none;
+        align-items: center;
+    }
+    
+    .el-popper.is-light {
+        background: transparent;
+        border: none;
+    }
+
+    .el-menu--popup{
+        box-shadow: none;
+        min-width: 100px;
+
+        &  li{
+            padding: 0;
+            justify-content: center;
+        }
+    }
+
+    // login
+
+    div.login-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 50vw;
+        max-height: 500px;
+        height: 500px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    }
+    
+    
+    div.dialog{
+        background: var(--tertiary-color);
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    // perfil do usuario
+    div.perfil-content{
+        margin: 50px 0 ;
+
+        .perfil-table{
+
+            th > .cell{
+                font-weight: normal;
+            }
+
+            tr.el-table__row, td, .el-table__cell {
+                background-color:  #EFEFEF;
+                border-bottom: 1px solid $user-grey;
+                
+
+                div.cell{
+                    word-break: break-word;
+                    padding: 2rem;
+                    
+                }
+            }
+        }
+    }
+
+
+
+    // paginas do admin
+    div.admin-page {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .el-form-item{
+        margin-bottom: 30px;
+    }
+
+    .top-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 50px;
+        .el-input{
+            height: 40px;
+            width: 200px;
+          }
+    }
+
+    div.admin-container {
+        padding: 4rem;
+        width: 100%;
+        position: relative;
+        margin-left: 200px;
+        background-color: $secondary-color;
+
+        h1 {
+            color: $text-color;
+            font-family: lato-regular;
+            font-size: 42px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-top: 2.5%;
+        }
+
+        button.el-button {
+            margin-bottom: 2.5%;
+            margin-top: 1%;
+        }
+        
+        a.underline-router {
+            text-decoration: underline;
+        }
+
+
+
+        div.admin-table{
+        
+            background-color: transparent !important;
+
+            
+            
+            thead {
+                tr, .el-table__cell {
+                    background-color: transparent;
+                    color: $admin-grey;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    font-size: 10px;
+                }
+
+                th.el-table__cell {
+                    width: 100%;
+                    text-align: center;
+                    padding: 0;
+                }
+
+                
+            }
+
+            tbody {
+                tr.el-table__row, td, .el-table__cell {
+                    background-color: transparent !important;
+                    color: $admin-grey;
+                    font-size: 14px;
+                    height: 128px;
+                    
+                    
+
+                    &:hover{
+                        background-color: transparent !important;
+                    }
+                }
+                tr:hover {
+                    background-color: transparent !important;
+                }
+
+                td, tr, th{
+                    border-bottom: 0px solid transparent !important;
+                }
+
+                div.cell {
+                  background: #fff;
+                  height: 100px !important;
+                  padding: 10px !important;
+                  width: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  word-break: normal;
+                  white-space: pre;
+                }
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 400;
+                    white-space: normal;
+                    text-align: center;
+                }
+                h3 {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: var(--cta-color);
+                }
+
+                h4 {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+
+                .el-icon.table-edit, .el-icon.table-delete {
+                    margin: 0 5px;
+                    cursor: pointer;
+                }
+
+                span.el-checkbox__inner {
+                    background: transparent !important;
+                    &::after{
+                        border: 1.5px solid $admin-grey;
+                        border-left: 0;
+                        border-top: 0;
+                    }
+                }
+                
+
+                button.table-edit{
+                    background-color: transparent;
+                    border: 1px solid $admin-grey;
+                    color: $admin-grey;
+
+                    &:hover{
+                        background-color: $admin-grey;
+                        color: #fff;
+                    }
+
+                }
+            }
+        
+        }
+
+    }
+
+    .login{
+        background-color: #CACACA;
+    }
+
+    .el-button:hover{
+        background-color: transparent;
+        border: 1px solid var(--cta-color);
+        color: var(--cta-color);
+    }
+    
+    button.cta{
+        border: none !important;
+        background-color: var(--cta-color) !important; 
+        color: white !important;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3 ease-in-out;
+        &:hover{
+            transform: scale(1.1);
+            background-color: var(--cta-color);
+        }
+    }
+    button.admin-cta{
+        border: none;
+        background-color: $admin-cta;
+        color: white;
+    }
+
+    button.el-button{
+        padding: 20px 40px !important;
+    }
+    button.cta.is-disabled{
+        background-color: var(--cta-color);
+        opacity: 0.5;
+        cursor: not-allowed;
+        &:hover{
+            transform: none;
+            background-color: var(--cta-color);
+        }
+    }
+
+    // element plus
+    div.el-breadcrumb {
+        margin-bottom: 10px;
+
+        
+        span.el-breadcrumb__inner[role=link]{
+            color: $user-grey;
+            font-weight: normal;
+
+            &:hover{
+                color: $user-grey;
+            }
+            &.is-link{
+                text-decoration: underline;
+
+                &:hover{
+                    color: var(--cta-color);
+                }
+            }
+        }
+    }
+    .el-divider__text{  
+        background-color: $secondary-color;
+        white-space: nowrap;
+      }
+    
+      .el-radio-group {
+        display: flex;
+        flex-direction: column;
+        .el-radio-button--large .el-radio-button__inner {
+          padding: 16px 24px;
+          font-size: var(--el-font-size-base);
+          margin: 5px 0;
+          border: none;
+          width: 200px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          box-shadow: none;
+          display: flex;
+            justify-content: center;
+            align-items: center;
+    
+          &:hover{
+            color: var(--cta-color);
+          }
+    
+        }
+        .el-radio-button__original-radio:checked + .el-radio-button__inner{
+            background-color: var(--tertiary-color);
+            color: var(--cta-color);
+        }
+      }
+
+      // element plus personni theme
+      .el-input__wrapper.is-focus, .el-select 
+      .el-input__wrapper.is-focus,
+      .el-select .el-input.is-focus .el-input__wrapper,
+      .el-textarea__inner:focus {
+        box-shadow: 0 0 0 1px var(--cta-color) inset !important;
+      }
+      .el-switch.is-checked .el-switch__core {
+        border-color: var(--cta-color);
+        background-color: var(--cta-color);
+      }
+      .el-select-dropdown {
+        background-color: $primary-color;
+      }
+      .el-select-dropdown__item.selected {
+        color: var(--cta-color);
+      }
+      .el-input-number__decrease:hover, .el-input-number__increase:hover {
+        color: var(--cta-color);
+      }
+      .el-input-number__decrease:hover ~ .el-input:not(.is-disabled) .el-input__wrapper, .el-input-number__increase:hover ~ .el-input:not(.is-disabled) .el-input__wrapper {
+        box-shadow: 0 0 0 1px var(--cta-color) inset !important;
+      }
+      .el-switch__label.is-active {
+        color: var(--cta-color);
+      }
+      .el-table .ascending .sort-caret.ascending {
+        border-bottom-color: var(--cta-color);
+      }
+      .el-table .descending .sort-caret.descending {
+        border-top-color: var(--cta-color);
+      }
+      .el-checkbox__input.is-checked + .el-checkbox__label{
+        color: var(--cta-color);
+      }
+      .el-checkbox{
+        .is-checked{
+            color: var(--cta-color);
+            .el-checkbox__inner{
+                border-color: var(--cta-color);
+                background-color: var(--cta-color);
+            }
+        }
+      }
+      .el-checkbox__inner:hover{
+        border-color: var(--cta-color);
+      }
+      .el-tabs__active-bar{
+        background-color: var(--cta-color);
+      }
+      .el-tabs__item.is-active{
+        color: var(--cta-color);
+      }
+      .el-tabs__item:hover{
+        color: var(--cta-color);
+      }
+
+      .el-table td.el-table__cell, .el-table th.el-table__cell.is-leaf {
+        border-bottom: 0 !important;
+      }
+
+}

@@ -1,0 +1,6 @@
+html {
+  @apply antialiased min-h-full;
+}
+[v-cloak] {
+  display: none;
+}

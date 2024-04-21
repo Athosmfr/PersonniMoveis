@@ -1,0 +1,41 @@
+{
+  "name": "vue3-template",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --host",
+    "lint": "pnpm run lint:js && pnpm run lint:style",
+    "lint:fix": "pnpm run lint:js -- --fix && pnpm run lint:style -- --fix",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore src",
+    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "start": "vite"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@googlemaps/markerclusterer": "^2.5.1",
+    "@popperjs/core": "^2.11.7",
+    "axios": "^1.4.0",
+    "chart.js": "^3.9.1",
+    "element-plus": "^2.3.7",
+    "google-maps-api-loader": "^1.1.1",
+    "jwt-decode": "^3.1.2",
+    "nodejs-pagseguro": "^1.0.9",
+    "pagseguro": "^0.1.0",
+    "vue": "^3.2.47",
+    "vue-chart-3": "^3.1.8",
+    "vue-jsonp": "^2.0.0",
+    "vue-router": "^4.1.6",
+    "vue-the-mask": "^0.11.1"
+  },
+  "devDependencies": {
+    "@fawmi/vue-google-maps": "^0.9.79",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
+    "sass": "^1.62.1",
+    "vite": "^4.1.4",
+    "vite-svg-loader": "^4.0.0",
+    "vue-google-autocomplete": "^1.1.4"
+  }
+}
